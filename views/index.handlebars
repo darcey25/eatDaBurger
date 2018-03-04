@@ -1,35 +1,50 @@
 
-<h1>Burgers!</h1>
+    <div class="jumbotron jumbotron-fluid center">
+      <div class="img"></div>
+      <div class="container">
+        <h1 class="display-4">Restaurant tracker</h1>
+        <h1 class="lead">Keep track of restaurants around Austin you want to visit.</h1>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-4">
+          <h1>Restaurants wishlist!</h1>
+          <ul>
+            {{#each restaurants}}
+              {{#unless visited}}
+                <li>
+                  <h6><button type="button" class="visited btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="mark as visited" data-id="{{id}}" data-visited="true"><i class="fas fa-check-square fa-1x"></i></button>{{restaurant}}</h6>
+                </li>
+              {{/unless}}
+            {{/each}}
+          </ul>
+        </div>
 
-      <h2>Burgers that are not eaten!</h2>
-      <ul>
-        {{#each burgers}}
-          {{#unless eaten}}
-            <li>
-              {{id}}. {{burger}}
-              <button class="eat-burger" data-id="{{id}}" data-hungry="true">Devour</button>
-            </li>
-          {{/unless}}
-        {{/each}}
-      </ul>
-
-
-      <h2>Add a Burger</h2>
-        <form class="create-form">
-          <div class="form-group">
-            <label for="bu">Burger Name:</label>
-            <input type="text" id="bu" name="name">
+        <div class="col-4">
+          <img class="image" src="assets/images/austinFood.webp">
+            <form class="create-form">
+              <div class="form-group">
+                <label for="bu"></label>
+                <input type="text" class="form-control" id="bu" name="name" placeholder="Restaurant name">
+              </div>
+              <button class="btn btn-secondary btn-block" type="submit">Add Restaurant</button>
+            </form>
+            <!-- <img class="image" src="assets/images/austinFood.jpg"> -->
           </div>
-          <button class="btn btn-primary" type="submit">Add Burger</button>
-        </form>
 
-        <h2>Burgers that are eaten!</h2>
-        <ul>
-          {{#each burgers}}
-            {{#if eaten}}
-              <li>
-                {{id}}. {{burger}}
-              </li>
-            {{/if}}
-          {{/each}}
-        </ul>
+          <div class="col-4">
+            <h1>Visited restaurants!</h1>
+            <ul>
+              {{#each restaurants}}
+                {{#if visited}}
+                  <li>
+                    <h6><button type="button" class="remove btn btn-outline-danger" data-toggle="tooltip" data-placement="left" title="Delete" data-id="{{id}}"><i class="fas fa-times "></i></i></button>{{restaurant}}</h6>
+                  </li>
+                {{/if}}
+              {{/each}}
+            </ul>
+          </div>
+      </div>
+    </div>
+

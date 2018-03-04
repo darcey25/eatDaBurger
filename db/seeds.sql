@@ -1,3 +1,3 @@
-INSERT INTO burgers (burger) VALUES ("Mushroom Swiss");
-INSERT INTO burgers (burger, eaten) VALUES ("Cheese Burger", true);
-INSERT INTO burgers (burger) VALUES ("Bacon Cheese Burger");
+INSERT INTO restaurants (restaurant) VALUES ("Hopdoddy");
+INSERT INTO restaurants (restaurant, visited) VALUES ("Kerbey lane", true);
+INSERT INTO restaurants (restaurant) VALUES ("Gloria's");

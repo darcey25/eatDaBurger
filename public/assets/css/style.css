@@ -1,0 +1,30 @@
+.btn {
+	margin: 2px 5px 2px 2px;
+}
+.container {
+	text-align: center;
+}
+
+.jumbotron {
+	background-image: url("../images/austinFoodTruck.jpg");
+}
+
+.display-4, .lead {
+	text-shadow: 2px 2px 5px #3ae32b;
+	opacity: none;
+	color: #103e68;
+}
+
+.lead {
+	font-size: 28px;
+}
+
+.image {
+	width: 100%;
+}
+ ul {
+ 	list-style-type: none;
+ }
+ body {
+ 	background-color: #d8dde2;
+ }

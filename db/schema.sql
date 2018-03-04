@@ -1,10 +1,21 @@
-CREATE DATABASE burgers_DB;
-USE burgers_DB;
+-- restaurants database schema
+CREATE DATABASE restaurants_DB;
+USE restaurants_DB;
 
-CREATE TABLE burgers
+CREATE TABLE restaurants
 (
 	id INT NOT NULL AUTO_INCREMENT,
-	burger VARCHAR(100) NOT NULL,
-	eaten BOOLEAN DEFAULT false,
+	restaurant VARCHAR(100) NOT NULL,
+	visited BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
+);
+
+
+--JAWS database schema
+CREATE TABLE restaurants (
+	id INT AUTO_INCREMENT NOT NULL,
+    restaurant VARCHAR(100) NOT NULL,
+	visited BOOLEAN DEFAULT false,
+    createdAt TIMESTAMP NOT NULL,
+    PRIMARY KEY(id)
 );
