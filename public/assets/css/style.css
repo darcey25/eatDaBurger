@@ -10,9 +10,8 @@
 }
 
 .display-4, .lead {
-	text-shadow: 2px 2px 5px #3ae32b;
-	opacity: none;
-	color: #103e68;
+	text-shadow: 2px 2px 20px #00ffff;
+	color: #3596cc;
 }
 
 .lead {
