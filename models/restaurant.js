@@ -2,26 +2,17 @@ var orm = require("../config/orm.js");
 
 var restaurant = {
 	selectAll: function(cb) {
-		orm.selectAll("restaurants", function(res) {
-			cb(res);
-		});
+		orm.selectAll("restaurants", cb);
 	},
-
 	insertOne: function(cols, vals, cb) {
-		orm.insertOne("restaurants", cols, vals, function(res) {
-			cb(res);
-		});
+		orm.insertOne("restaurants", cols, vals, cb);
 	},
-	updateOne: function(objColVals, condition, cb) {
-		orm.updateOne("restaurants", objColVals, condition, function(res) {
-			cb(res);
-		});
+	updateOne: function(objColVals, id, cb) {
+		orm.updateOne("restaurants", objColVals, id, cb);
 	},
-	deleteOne: function(condition, cb) {
-		orm.deleteOne("restaurants", condition, function(res) {
-			cb(res);
-		});
+	deleteOne: function(id, cb) {
+		orm.deleteOne("restaurants", id, cb);
 	}
-}
+};
 
 module.exports = restaurant;
